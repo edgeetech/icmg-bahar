@@ -45,9 +45,9 @@ describe('achievement rules', () => {
   it('gives the first male character the Kimya achievement', () => {
     const firstMaleChild = children.find((child) => child.gender === 'boy');
 
-    expect(firstMaleChild?.name).toBe('Emir');
+    expect(firstMaleChild?.name).toBe('Yusuf Eymen');
     expect(firstMaleChild && calculateCompletedCount(firstMaleChild.id, achievements, '2026-05-03')).toBe(1);
-    expect(achievements[0]?.results.muhammedEmir).toBe('earned');
+    expect(achievements[0]?.results.yusufEymen).toBe('earned');
   });
 
   it('resolves medal from available completion ratio', () => {

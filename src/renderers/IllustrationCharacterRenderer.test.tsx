@@ -3,9 +3,9 @@ import { describe, expect, it } from 'vitest';
 import { IllustrationCharacterRenderer } from './IllustrationCharacterRenderer';
 
 const child = {
-  id: 'muhammedEmir' as const,
-  name: 'Muhammed Emir',
-  avatarAlt: 'Illustrated boy character named Muhammed Emir',
+  id: 'idris' as const,
+  name: 'Idris',
+  avatarAlt: 'Illustrated boy character named Idris',
   gender: 'boy' as const,
   assets: {
     neutral: '/characters/shared/neutral.png',
@@ -13,7 +13,7 @@ const child = {
     proud: '/characters/shared/withMedal.png',
     excited: '/characters/shared/approver.png',
   },
-  badgeColor: '#ff996f',
+  badgeColor: '#6fa9ff',
   badgeTextColor: '#ffffff',
 };
 
