@@ -75,15 +75,6 @@ export const children: Child[] = [
     badgeTextColor: '#ffffff',
   },
   {
-    id: 'muhammedEmir',
-    name: 'Emir',
-    avatarAlt: 'Illustrated boy character named Emir',
-    gender: 'boy',
-    assets: childAssets('c07'),
-    badgeColor: '#ff996f',
-    badgeTextColor: '#ffffff',
-  },
-  {
     id: 'mehmetAkif',
     name: 'Mehmet Akif',
     avatarAlt: 'Illustrated boy character named Mehmet Akif',

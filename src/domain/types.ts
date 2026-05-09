@@ -3,7 +3,6 @@ export type ChildId =
   | "alican"
   | "tahaGul"
   | "yahyaGeden"
-  | "muhammedEmir"
   | "mehmetEfe"
   | "omerGul"
   | "ahmetBashan"

@@ -2,7 +2,6 @@ import type { Achievement, ChildId, AchievementStatus } from "../domain/types";
 
 const chemistryResults: Record<ChildId, AchievementStatus> = {
   yusufEymen: "earned",
-  muhammedEmir: "earned",
   alican: "missed",
   tahaGul: "earned",
   yahyaGeden: "earned",
@@ -29,7 +28,6 @@ const quantumResults: Record<ChildId, AchievementStatus> = {
   aliTasdemir: "earned",
   muhammetCetin: "earned",
   mustafaCetin: "earned",
-  muhammedEmir: "missed",
   alican: "missed",
   mehmetEfe: "missed",
 };
@@ -46,7 +44,6 @@ const lockedForAll: Record<ChildId, AchievementStatus> = {
   aliTasdemir: "locked",
   muhammetCetin: "locked",
   mustafaCetin: "locked",
-  muhammedEmir: "locked",
   alican: "locked",
   mehmetEfe: "locked",
 };
