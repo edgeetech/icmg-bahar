@@ -1,0 +1,153 @@
+.illustration-character {
+  align-items: center;
+  animation: illustration-idle 3.8s ease-in-out infinite;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  display: inline-flex;
+  height: 150px;
+  justify-content: center;
+  padding: 0;
+  position: relative;
+  width: min(100%, 90px);
+}
+
+.illustration-character:focus-visible {
+  outline: 3px solid rgba(110, 163, 255, 0.42);
+  outline-offset: 8px;
+}
+
+.illustration-character--selected {
+  transform: translateY(-10px) scale(1.05);
+}
+
+.illustration-character--happy {
+  animation-duration: 3.1s;
+}
+
+.illustration-character--excited {
+  animation-duration: 2.1s;
+}
+
+.illustration-character__glow {
+  background:
+    radial-gradient(circle at 50% 42%, rgba(255, 255, 255, 0.9), transparent 34%),
+    radial-gradient(circle at 50% 72%, rgba(255, 227, 170, 0.75), transparent 44%);
+  border-radius: 28px;
+  inset: 8px 2px 12px;
+  position: absolute;
+}
+
+.illustration-character__base,
+.illustration-character__sparkles,
+.illustration-character__medal,
+.illustration-character__confetti {
+  pointer-events: none;
+  position: absolute;
+  user-select: none;
+}
+
+.illustration-character__base {
+  bottom: 2px;
+  filter: drop-shadow(0 10px 14px rgba(85, 109, 142, 0.18));
+  height: 140px;
+  width: 90px;
+  object-fit: contain;
+  object-position: bottom center;
+  z-index: 2;
+}
+
+.illustration-character__medal {
+  animation: medal-pulse 2.1s ease-in-out infinite;
+  bottom: 30px;
+  height: 26px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 26px;
+  z-index: 4;
+}
+
+.illustration-character__sparkles {
+  animation: sparkle-pulse 1.8s ease-in-out infinite;
+  height: 124px;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  width: 124px;
+  z-index: 5;
+}
+
+.illustration-character__confetti {
+  animation: confetti-float 1.4s ease-in-out infinite;
+  height: 88px;
+  left: 50%;
+  top: 2px;
+  transform: translateX(-50%);
+  width: 116px;
+  z-index: 6;
+}
+
+.illustration-character--proud .illustration-character__base {
+  transform: translateY(-2px) scale(1.02);
+}
+
+.illustration-character--excited .illustration-character__base {
+  animation: excited-bounce 0.9s ease-in-out infinite;
+  transform-origin: 50% 88%;
+}
+
+.illustration-character__status {
+  background: rgba(255, 255, 255, 0.72);
+  border-radius: 999px;
+  bottom: 6px;
+  color: #6f7b8f;
+  font-size: 0.62rem;
+  font-weight: 900;
+  left: 50%;
+  letter-spacing: 0.04em;
+  padding: 0.2rem 0.35rem;
+  position: absolute;
+  transform: translateX(-50%);
+  z-index: 3;
+}
+
+@keyframes illustration-idle {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+@keyframes medal-pulse {
+  0%, 100% { transform: translateX(-50%) scale(1); }
+  50% { transform: translateX(-50%) scale(1.08); }
+}
+
+@keyframes sparkle-pulse {
+  0%, 100% { opacity: 0.72; transform: translateX(-50%) scale(0.96); }
+  50% { opacity: 1; transform: translateX(-50%) scale(1.04); }
+}
+
+@keyframes confetti-float {
+  0%, 100% { transform: translateX(-50%) translateY(0); }
+  50% { transform: translateX(-50%) translateY(-4px); }
+}
+
+@keyframes excited-bounce {
+  0%, 100% { transform: translateY(0) scale(1); }
+  45% { transform: translateY(-5px) scale(1.03); }
+  70% { transform: translateY(1px) scale(0.99); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .illustration-character,
+  .illustration-character__base,
+  .illustration-character__medal,
+  .illustration-character__sparkles,
+  .illustration-character__confetti {
+    animation: none !important;
+    transition-duration: 0.001ms !important;
+  }
+
+  .illustration-character--selected {
+    transform: none;
+  }
+}
