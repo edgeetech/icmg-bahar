@@ -1,0 +1,127 @@
+import type { Achievement, ChildId, AchievementStatus } from "../domain/types";
+
+const chemistryResults: Record<ChildId, AchievementStatus> = {
+  yusufEymen: "earned",
+  muhammedEmir: "earned",
+  alican: "missed",
+  tahaGul: "earned",
+  yahyaGeden: "earned",
+  mehmetEfe: "missed",
+  omerGul: "earned",
+  ahmetBashan: "earned",
+  idris: "earned",
+  mehmetAkif: "missed",
+  mustafaBashan: "missed",
+  aliTasdemir: "missed",
+  muhammetCetin: "missed",
+  mustafaCetin: "missed",
+};
+
+const quantumResults: Record<ChildId, AchievementStatus> = {
+  idris: "earned",
+  mehmetAkif: "earned",
+  ahmetBashan: "earned",
+  tahaGul: "earned",
+  omerGul: "earned",
+  yusufEymen: "earned",
+  mustafaBashan: "earned",
+  yahyaGeden: "earned",
+  aliTasdemir: "earned",
+  muhammetCetin: "earned",
+  mustafaCetin: "earned",
+  muhammedEmir: "missed",
+  alican: "missed",
+  mehmetEfe: "missed",
+};
+
+const lockedForAll: Record<ChildId, AchievementStatus> = {
+  idris: "locked",
+  mehmetAkif: "locked",
+  ahmetBashan: "locked",
+  tahaGul: "locked",
+  omerGul: "locked",
+  yusufEymen: "locked",
+  mustafaBashan: "locked",
+  yahyaGeden: "locked",
+  aliTasdemir: "locked",
+  muhammetCetin: "locked",
+  mustafaCetin: "locked",
+  muhammedEmir: "locked",
+  alican: "locked",
+  mehmetEfe: "locked",
+};
+
+export const achievements: Achievement[] = [
+  {
+    id: "chemistry-2026-05-01",
+    title: "Kimya",
+    icon: "🧪",
+    date: "2026-05-01",
+    results: {
+      ...chemistryResults,
+    },
+  },
+  {
+    id: "quantum-2026-05-08",
+    title: "Kuantum Fiziği",
+    icon: "⚛️",
+    date: "2026-05-08",
+    results: { ...quantumResults },
+  },
+  {
+    id: "??-2026-05-15",
+    title: "??",
+    icon: "🌱",
+    date: "2026-05-15",
+    results: lockedForAll,
+  },
+  {
+    id: "??-2026-05-22",
+    title: "??",
+    icon: "🌱",
+    date: "2026-05-22",
+    results: lockedForAll,
+  },
+  {
+    id: "??-2026-05-29",
+    title: "??",
+    icon: "🌱",
+    date: "2026-05-29",
+    results: lockedForAll,
+  },
+  {
+    id: "??-2026-06-05",
+    title: "??",
+    icon: "🌱",
+    date: "2026-06-05",
+    results: lockedForAll,
+  },
+  {
+    id: "??-2026-06-12",
+    title: "??",
+    icon: "🌱",
+    date: "2026-06-12",
+    results: lockedForAll,
+  },
+  {
+    id: "??-2026-06-19",
+    title: "??",
+    icon: "🌱",
+    date: "2026-06-19",
+    results: lockedForAll,
+  },
+  {
+    id: "??-2026-06-26",
+    title: "??",
+    icon: "🌱",
+    date: "2026-06-26",
+    results: lockedForAll,
+  },
+  {
+    id: "??-2026-07-03",
+    title: "??",
+    icon: "🌱",
+    date: "2026-07-03",
+    results: lockedForAll,
+  },
+];
