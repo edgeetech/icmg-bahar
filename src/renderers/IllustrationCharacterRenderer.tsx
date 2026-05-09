@@ -2,14 +2,16 @@ import type { CharacterRendererProps } from './CharacterRenderer';
 import { useLocale } from '../i18n';
 import './illustrationCharacterRenderer.css';
 
+const base = import.meta.env.BASE_URL;
+
 const medalAssets = {
-  bronze: '/characters/shared/medal-bronze.svg',
-  silver: '/characters/shared/medal-silver.svg',
-  gold: '/characters/shared/medal-gold.svg',
+  bronze: `${base}characters/shared/medal-bronze.svg`,
+  silver: `${base}characters/shared/medal-silver.svg`,
+  gold: `${base}characters/shared/medal-gold.svg`,
 } as const;
 
-const sparklesAsset = '/characters/shared/sparkles.svg';
-const confettiAsset = '/characters/shared/confetti.svg';
+const sparklesAsset = `${base}characters/shared/sparkles.svg`;
+const confettiAsset = `${base}characters/shared/confetti.svg`;
 
 type IllustrationCharacterVisualProps = Pick<
   CharacterRendererProps,
